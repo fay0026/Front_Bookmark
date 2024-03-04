@@ -1,4 +1,12 @@
- React + Vite
+## Pour la récupération du projet, lancer npm install, puis
+## npm update, pour obtenir les packages
+
+-npm run dev, démarre le serveur
+-npm run build, reconstruit le serveur
+
+## npm run pour les commandes
+
+# React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

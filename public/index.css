@@ -18,13 +18,14 @@ html, body, #root {
 }
 
 .app__header {
-  min-height: 5em;
+  min-height: 15%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .app__main {
+  min-height: 70%;
   flex: 1;
   background-color: #222;
   border-radius: 3px;
@@ -34,6 +35,7 @@ html, body, #root {
 }
 
 .app__footer {
+  min-height: 15%;
   text-align: center;
 }
 
@@ -69,7 +71,7 @@ html, body, #root {
   flex: 1;
   background-color: #222;
   padding: .5em;
-  text-align: justify; 
+  text-align: justify;
 }
 .card.foldable {
   border-bottom: .5em solid #444;
