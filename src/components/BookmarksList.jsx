@@ -4,17 +4,19 @@ import fetchAllBookmarks from "../services/api/bookmarks";
 function BookmarksList() {
   const [bookmarksData, setBookmarksData] = useState([]);
 
-  fetchAllBookmarks().then((json) => {
-    setBookmarksData(json["hydra:member"]);
-    console.log(json["hydra:member"]);
-  });
-
-  console.log(bookmarksData);
   useEffect(() => {
-    bookmarksData.map((bookmark) => bookmark[0].name);
-  }, [bookmarksData]);
+    fetchAllBookmarks().then((json) => {
+      setBookmarksData(json["hydra:member"]);
+    });
+  }, []);
 
-  return <article>{bookmarksData}</article>;
+  return (
+    <section>
+      {bookmarksData.map((bookmark) => (
+        <article key={`${bookmark.id}`}>{bookmark.name}</article>
+      ))}
+    </section>
+  );
 }
 
 BookmarksList.propTypes = {};
