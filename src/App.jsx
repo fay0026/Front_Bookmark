@@ -1,5 +1,6 @@
 import React from "react";
 import BookmarksList from "./components/BookmarksList";
+import Rating from "./components/Rating.jsx";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       </header>
       <main className="app__main">
         <BookmarksList />
+        <Rating value={3.58} />
       </main>
       <footer className="app__footer footer">footer</footer>
     </div>
