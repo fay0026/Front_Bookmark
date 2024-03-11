@@ -1,5 +1,5 @@
 import React from "react";
-import BookmarksList from "./components/BookmarksList.jsx";
+import BookmarksList from "./components/BookmarksList";
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
         <h1 className="header__title">Introduction to React</h1>
       </header>
       <main className="app__main">
-          <BookmarksList />
+        <BookmarksList />
       </main>
       <footer className="app__footer footer">footer</footer>
     </div>
