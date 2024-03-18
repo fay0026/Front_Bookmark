@@ -4,13 +4,15 @@ import Rating from "./Rating";
 import { avatarUrl } from "../services/api/bookmarks";
 
 function BookmarkItem({ data }) {
+  const $split = data.owner.split("/");
+  const $id = $split[3];
   return (
     <article className="personalSpace">
       <Rating className="personalSpace" value={data.rateAverage} />
       <a className="personalSpace" href={data.url}>
         {data.name}
       </a>
-      <img src={avatarUrl(data.owner.id)} alt="user profile" />
+      <img src={avatarUrl($id)} alt="user profile" />
     </article>
   );
 }
