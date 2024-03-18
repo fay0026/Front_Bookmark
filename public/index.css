@@ -144,3 +144,7 @@ html, body, #root {
   font-family: inherit;
   cursor: pointer;
 }
+
+.heNeedsToBeRed {
+  color: red;
+}

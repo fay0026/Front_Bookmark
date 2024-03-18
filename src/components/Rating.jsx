@@ -5,15 +5,16 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 function Rating({ value }) {
   return (
-    <span>
+    <span className="fa-layers fa-fw fa-1x">
       <FontAwesomeIcon
-        class="fa-layers"
+        class="fa-layers fa-3x"
         icon={faStar}
-        size="2xl"
         style={{ color: "#FFD43B" }}
       />
-      {Math.round(value * 10) / 10}
-      <FontAwesomeIcon />
+      <i className="fa-solid heNeedsToBeRed" data-fa-transform="shrink-1 up-1">
+        {" "}
+        {Math.round(value * 10) / 10}{" "}
+      </i>
     </span>
   );
 }
