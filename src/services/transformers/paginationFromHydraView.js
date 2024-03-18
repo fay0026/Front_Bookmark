@@ -4,9 +4,9 @@ export default function pagination({ hydra }) {
   }
   return {
     current: hydra.id,
-    first: hydra.first,
-    previous: hydra.previous,
-    next: hydra.next,
-    last: hydra.last,
+    first: hydra.,
+    previous: hydra.,
+    next: hydra.,
+    last: hydra.,
   };
 }
