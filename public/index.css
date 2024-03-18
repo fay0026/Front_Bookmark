@@ -146,5 +146,10 @@ html, body, #root {
 }
 
 .heNeedsToBeRed {
+  margin-left: 10px;
   color: red;
+}
+
+.personalSpace {
+  margin: 30px;
 }

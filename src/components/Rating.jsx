@@ -7,13 +7,15 @@ function Rating({ value }) {
   return (
     <span className="fa-layers fa-fw fa-1x">
       <FontAwesomeIcon
-        class="fa-layers fa-3x"
+        className="fa-layers fa-3x"
         icon={faStar}
         style={{ color: "#FFD43B" }}
       />
-      <i className="fa-solid heNeedsToBeRed" data-fa-transform="shrink-1 up-1">
-        {" "}
-        {Math.round(value * 10) / 10}{" "}
+      <i
+        className="fa-layers fa-solid heNeedsToBeRed"
+        data-fa-transform="shrink-1 right-5"
+      >
+        {Math.round(value * 10) / 10}
       </i>
     </span>
   );
