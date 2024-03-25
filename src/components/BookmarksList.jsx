@@ -3,6 +3,7 @@ import { fetchAllBookmarks } from "../services/api/bookmarks";
 import BookmarkItem from "./BookmarkItem";
 import paginationFromHydraView from "../services/transformers/paginationFromHydraView";
 import Pagination from "./Pagination";
+import Loading from "./Loading.jsx";
 
 function BookmarksList() {
   const [bookmarksData, setBookmarksData] = useState([]);
@@ -17,6 +18,7 @@ function BookmarksList() {
   searchParams.append("page", page.toString());
 
   useEffect(() => {
+    setBookmarksData([]);
     fetchAllBookmarks(searchParams).then((json) => {
       setBookmarksData(json["hydra:member"]);
       setPagination(
@@ -28,9 +30,13 @@ function BookmarksList() {
   return (
     <section>
       <Pagination data={pagination} onChange={pageHandler} />
-      {bookmarksData.map((bookmark) => (
-        <BookmarkItem key={`${bookmark.id}`} data={bookmark} />
-      ))}
+      {bookmarksData ? (
+        bookmarksData.map((bookmark) => (
+          <BookmarkItem key={`${bookmark.id}`} data={bookmark} />
+        ))
+      ) : (
+        <Loading />
+      )}
       <Pagination data={pagination} onChange={pageHandler} />
     </section>
   );

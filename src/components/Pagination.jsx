@@ -76,14 +76,3 @@ Pagination.defaultProps = {
 };
 
 export default Pagination;
-
-/* <button type="button" className="btn btn-link btn-secondary">
-        {data.previous}
-      </button>
-      {data.current}
-      <button type="button" className="btn btn-link btn-secondary">
-        {data.next}
-      </button>
-      <button type="button" className="btn btn-link btn-secondary">
-        {data.last}
-      </button> */
