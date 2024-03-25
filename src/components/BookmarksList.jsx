@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { fetchAllBookmarks } from "../services/api/bookmarks";
 import BookmarkItem from "./BookmarkItem";
-import pagination from "../services/transformers/paginationFromHydraView";
+import paginationFromHydraView from "../services/transformers/paginationFromHydraView";
 
 function BookmarksList() {
   const [bookmarksData, setBookmarksData] = useState([]);
@@ -10,11 +10,11 @@ function BookmarksList() {
   useEffect(() => {
     fetchAllBookmarks().then((json) => {
       setBookmarksData(json["hydra:member"]);
-      setPagination(pagination(json["hydra:view"]));
+      setPagination(
+        paginationFromHydraView(json["hydra:view"], json["hydra:totalItems"]),
+      );
     });
   }, []);
-
-  document.write(pagi);
 
   return (
     <section>

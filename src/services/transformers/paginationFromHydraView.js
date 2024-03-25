@@ -1,12 +1,12 @@
-export default function pagination({ hydra }) {
-  if (hydra.totalItems < 2) {
+export default function paginationFromHydraView(hydra, totalItems) {
+  if (totalItems < 2) {
     return null;
   }
   return {
     current: hydra.id,
-    first: hydra.,
-    previous: hydra.,
-    next: hydra.,
-    last: hydra.,
+    first: hydra["hydra:first"],
+    last: hydra["hydra:last"],
+    previous: hydra["hydra:previous"],
+    next: hydra["hydra:next"],
   };
 }

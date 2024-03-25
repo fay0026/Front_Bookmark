@@ -1,6 +1,5 @@
 import React from "react";
 import BookmarksList from "./components/BookmarksList";
-import Rating from "./components/Rating";
 
 function App() {
   return (
