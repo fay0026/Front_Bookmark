@@ -3,7 +3,7 @@ export default function paginationFromHydraView(hydra, totalItems) {
     return null;
   }
   return {
-    current: hydra.id,
+    current: hydra["@id"],
     first: hydra["hydra:first"],
     last: hydra["hydra:last"],
     previous: hydra["hydra:previous"],

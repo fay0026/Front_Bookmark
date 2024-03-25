@@ -153,3 +153,11 @@ html, body, #root {
 .personalSpace {
   margin: 30px;
 }
+
+.pagination {
+  display: flex;
+}
+
+a {
+  color: #6b8cd9;
+}
